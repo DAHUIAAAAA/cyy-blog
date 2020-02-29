@@ -1,0 +1,99 @@
+@import '../../assets/less/global.less';
+
+.home {
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    align-items    : center;
+    margin-top: 3%;
+
+    .layout {
+        width          : 65%;
+        display        : flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 960px) {
+            width         : 100%;
+            flex-direction: column;
+        }
+
+        .leftSide {
+            width: @homeContainer;
+
+            @media screen and (max-width: 960px) {
+                width: 100%;
+            }
+
+            .card {
+                width        : 100%;
+                display      : block;
+                background   : #fff;
+                border-radius: 5px;
+                cursor       : pointer;
+                color        : @titleFontColor;
+                margin-bottom: 10px;
+                padding      : @containerPadding;
+                transition   : all .5s;
+
+                .title {
+                    display    : flex;
+                    width      : 100%;
+                    font-size  : @titleFontSize;
+                    font-weight: bold;
+                    color      : #555
+                }
+
+                .label {
+                    font-size: @labelFontSize;
+                    color    : #888;
+                }
+
+                .content {
+                    font-size: @listFontSize;
+                    display  : flex;
+                    width    : 100%;
+                    color    : #888;
+                }
+            }
+
+            .card:hover {
+                transform: scale(1.01);
+            }
+        }
+
+        .rightSide {
+            width: 25%;
+
+            @media screen and (max-width: 960px) {
+                display: none;
+            }
+
+            .link {
+                display  : flex;
+                width    : 100%;
+                color    : @titleFontColor;
+                font-size: @listFontSize;
+
+                &:hover {
+                    color: @hoverColor;
+                }
+
+                .newArticleTitle {
+                    display      : inline-block;
+                    max-width    : 100px;
+                    white-space  : nowrap;
+                    text-overflow: ellipsis;
+                    overflow     : hidden;
+                    word-break   : keep-all;
+                }
+            }
+        }
+    }
+
+    .onBottom {
+        text-align: center;
+        margin: 30px;
+        font-size: 1rem;
+    }
+}
