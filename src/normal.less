@@ -1,0 +1,203 @@
+@import './assets/less/global.less';
+
+
+body {
+    margin   : 0;
+    font-size: 87.5%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html body,
+body .ant-layout {
+    background-color: #f5f5f5;
+}
+
+#root,
+.App,
+#router,
+#DefaultLayout,
+section {
+    height: 100%;
+}
+
+
+span {
+    display     : inline-block;
+    margin-right: 10px;
+}
+
+
+span[role="img"] {
+    margin-right: 6px;
+}
+
+[class*="hljs"] {
+    margin-right: 0;
+}
+
+.label {
+    display    : flex;
+    align-items: center;
+    width      : 100%;
+    padding    : 10px 0;
+    font-size  : @labelFontSize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color      : rgba(0, 0, 0, 0.65) !important;
+    font-weight: @hWight  !important;
+}
+
+//初始化markdown的样式
+blockquote {
+    font-style : italic;
+    border-left: 5px solid #ccc;
+    margin-left: 2em;
+    padding    : 1em;
+    background : #f8f8f8;
+}
+
+pre {
+    background-color: #f2f2f2;
+    padding         : 10px;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+    color           : #c7254e;
+    padding         : 3px;
+    border-radius   : 2px;
+    background-color: #f2f2f2;
+}
+
+
+a {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.ant-layout-content {
+    display       : flex;
+    flex-direction: column;
+}
+
+.card-container .ant-input-affix-wrapper {
+    margin-bottom: 20px;
+}
+
+// 初始化antd的样式
+.ant-select-selection__choice__content {
+    margin-right: 10px;
+}
+
+.ant-select-selection__choice__remove {
+    margin: 0;
+}
+
+// 初始化antd表单样式
+.ant-form {
+    width: 500px;
+
+    .ant-form-item {
+        width: 100%;
+
+        .ant-form-item-children {
+            width: 100%;
+
+            .ant-btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.ant-menu-item a {
+    font-size: @navMenuFontSize;
+}
+
+.ant-timeline-item-pending i {
+    margin: auto;
+    color : #ffffff;
+}
+
+.ant-timeline-item-pending .ant-timeline-item-head {
+    height         : 20px;
+    width          : 20px;
+    border-radius  : 50%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    background     : #1890ff !important;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-content {
+    height    : 120px;
+    margin-top: -16px;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-content>.ant-tabs-tabpane {
+    background: #fff;
+    padding   : 16px;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-bar {
+    border-color: #fff;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab {
+    border-color: transparent;
+    background  : transparent;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-bar .ant-tabs-tab-active {
+    border-color: #fff;
+    background  : #fff;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+    border: 1px solid transparent !important;
+}
+
+.ant-input-affix-wrapper .ant-input-suffix {
+    right: 0;
+}
+
+.ant-message>span {
+    transform: translateX(-50%);
+    position : relative;
+    left     : 50%;
+}
+
+.ant-btn-background-ghost a {
+    color: #1890ff;
+}
+
+.ant-tag {
+    margin-left: 8px;
+}
+
+.ant-card-head-title {
+    font-weight: bold;
+}
+
+.ant-card-head-title:before {
+    content     : '';
+    border-left : 10px solid #1890ff;
+    margin-right: 5px;
+}
+
+.ant-card{
+    border       : none !important;
+    overflow     : hidden;
+    border-radius: 5px !important;
+}
+
