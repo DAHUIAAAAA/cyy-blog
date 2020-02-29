@@ -1,0 +1,79 @@
+@import '../../assets/less/global.less';
+
+.container {
+
+    margin-top: 50px;
+
+    .tip {
+        margin: 30px;
+        text-align: center;
+    }
+
+    .body {
+        width     : 100%;
+        margin-top: 10px;
+        border-top: 1px solid @borderColor;
+
+        .text {
+            width        : 100%;
+            border       : 1px solid @borderColor;
+            border-radius: 5px;
+            padding      : 10px;
+            margin-bottom: 20px;
+            box-sizing   : border-box;
+            outline      : none;
+        }
+
+        .section,
+        .reply {
+            margin-top: 40px;
+            display   : flex;
+
+            .left {
+                width       : 32px;
+                margin-right: 12px;
+
+                .avatar {
+                    width        : 32px;
+                    height       : 32px;
+                    border-radius: 50%;
+                }
+            }
+
+            .right {
+                flex: 1;
+
+                .author {
+                    margin-bottom: 4px;
+
+                    .name {
+                        color: rgba(0, 0, 0, 0.45);
+                    }
+
+                    .time {
+                        color: #ccc;
+                    }
+                }
+
+                .replyBtn {
+                    margin-top: 12px;
+                }
+
+                .replies {
+
+                    .reply {
+                        margin-top: 20px;
+
+                        .replyAvatar {
+                            width        : 20px;
+                            height       : 20px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}

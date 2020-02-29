@@ -1,0 +1,130 @@
+@import '../../assets/less/global.less';
+
+.wrap {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-around;
+    box-shadow     : 0 0 15px 2px rgba(0, 0, 60, 0.1);
+    position       : fixed;
+    width          : 100%;
+    z-index        : 100;
+
+    @media screen and (max-width: 780px) {
+        justify-content: space-between;
+        padding        : 0 10px;
+        box-sizing     : border-box;
+    }
+
+    .btn {
+        display: none;
+
+        @media screen and (max-width: 780px) {
+            display: block;
+        }
+    }
+
+    .left {
+        display    : flex;
+        align-items: center;
+
+        .logoImg {
+            height         : 50px;
+            width          : 50px;
+            border-radius  : 50%;
+            overflow       : hidden;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            margin-right   : 30px;
+
+            &:after {
+                content            : '';
+                display            : flex;
+                width              : 50px;
+                height             : 50px;
+                background         : url('../../assets/imgs/logo.jpg');
+                background-position: center center;
+                background-size    : 90px;
+            }
+        }
+
+        .logoText {
+            font-size: @logoSize;
+        }
+    }
+
+    .right {
+
+        display    : flex;
+        align-items: center;
+
+        .menu {
+            @media screen and (max-width: 780px) {
+                position: fixed;
+                left    : 0;
+                top     : 0;
+                height  : 100%;
+                overflow: hidden;
+            }
+        }
+
+        .hideBtn {
+            display: none;
+
+            @media screen and (max-width: 780px) {
+               display: block;
+            }
+        }
+
+
+        .loginIn {
+
+            display: flex;
+
+            .avator {
+                width          : 40px;
+                left           : 40px;
+                border-radius  : 50%;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                overflow       : hidden;
+                margin         : 0 10px 0 20px;
+
+                img {
+                    width : 40px;
+                    height: 40px;
+                }
+            }
+
+            .nickname {
+                font-weight: bold;
+                cursor     : pointer;
+            }
+        }
+
+        .navBtn {
+            @media screen and (max-width: 780px) {
+                display: none;
+            }
+
+            .loginBtn {
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+//初始化antd样式
+:global(.ant-layout) {
+    background: #fff;
+}
+
+:global(.ant-layout-header) {
+    background: #fff;
+}
+
+:global(.ant-menu-horizontal) {
+    border     : none;
+    line-height: 62px;
+}
